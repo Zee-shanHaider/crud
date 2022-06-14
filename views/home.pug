@@ -1,0 +1,42 @@
+extends base.pug
+
+
+block scripts 
+    script(src="https://kit.fontawesome.com/0e818a5717.js" crossorigin="anonymous")
+block style
+    style 
+        include ../assets/css/style.css
+block content 
+  main#site-main
+    .container
+      .box-nav.d-flex.justify-between
+        a.border-shadow(href='/add-user')
+          span.text-gradient
+            | New User 
+            i.fa.fa-user
+      // ----Form Handling---
+      form(action='/' method='POST')
+        table.table
+          thead.thead-dark
+            tr
+              th ID
+              th Name
+              th @Email
+              th Gender
+              th Status
+              th Action
+          tbody
+            tr
+              td 1
+              td UserName
+              td example@ex.com
+              td Male
+              td Active
+              td
+                a.btn.border-shadow.update(href='#')
+                  span.text-gradient
+                    i.fa.fa-pencil
+                a.btn.border-shadow.delete(href='#')
+                  span.text-gradient
+                    i.fa.fa-times       
+      

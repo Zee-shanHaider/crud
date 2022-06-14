@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is a Crud Application</title>
+    <script src="https://kit.fontawesome.com/0e818a5717.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar container text-center">
+            <div id="navlist">
+                <ul>
+                    <li>
+                        <a href="/" class="nav-brand text-dark">User Management System </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- -----Main Section---- -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">
+                    New User <i class="fa fa-user"></i>
+                </span>
+                </a>
+
+            </div>
+            <!-- ----Form Handling--- -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>@Email</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>UserName</td>
+                            <td>example@ex.com</td>
+                            <td>Male</td>
+                            <td>Active</td>
+                            <td><a href="#" class="btn border-shadow update">
+                                <span class="text-gradient">
+                                    <i class="fa fa-pencil"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="btn border-shadow delete">
+                                <span class="text-gradient">
+                                    <i class="fa fa-times"></i>
+                                </span>
+                            </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    <!-- --/Main Site-- -->
+
+</body>
+</html>

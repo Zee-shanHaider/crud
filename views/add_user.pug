@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title this is a Crud Application
+  script(src='https://kit.fontawesome.com/0e818a5717.js' crossorigin='anonymous')
+  style
+      include ../assets/css/style.css
+header
+  nav.navbar.container.text-center
+    #navlist
+      ul
+        li
+          a.nav-brand.text-dark(href='/') User Management System 
+// -----Main Section----
+main#site-main
+  .container
+    .box-nav.d-flex.justify-between
+      .filter
+        a(href='/')
+          i.fas.fa-angle-double-left
+          |  All Users
+    .form-title.text-center
+      h2.text-dark
+        | New User
+      span.text-light Use the below form to Create the new User Account
+    // ----Form Handling---
+    form#update_user(action='/add_user' method='POST')
+      .new-user
+        .form-group
+          label.text-light(for='name') Name:
+          input#name.text-light(type='text' name='name' placeholder='Username')
+        .form-group
+          label.text-light(for='email') Email:
+          input#email.text-light(type='text' name='email' placeholder='example@gmail.com')
+        .form-group
+          label.text-light(for='Gender') Gender
+          .radio-inline
+            input#Gender(type='radio' name='Gender' value='Male')
+            label.text-light(for='Gender') Male
+          .radio-inline
+            input#Gender(type='radio' name='Gender' value='Female')
+            label.text-light(for='Gender') Female
+        .form-group
+          label.text-light(for='Status') Status
+          .radio-inline
+            input#Status(type='radio' name='Status' value='Active')
+            label.text-light(for='Status') Active
+          .radio-inline
+            input#Status(type='radio' name='Status' value='Inactive')
+            label.text-light(for='Status') In-active
+        .form-group
+            button.btn.text-dark.update(type='submit') Save
+// --/Main Site--

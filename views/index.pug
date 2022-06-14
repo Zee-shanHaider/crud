@@ -1,0 +1,45 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title this is a Crud Application
+  script(src='https://kit.fontawesome.com/0e818a5717.js' crossorigin='anonymous')
+  style
+      include ../assets/css/style.css
+
+// -----Main Section----
+main#site-main
+  .container
+    .box-nav.d-flex.justify-between
+      a.border-shadow(href='/add-user')
+        span.text-gradient
+          | New User 
+          i.fa.fa-user
+    // ----Form Handling---
+    form(action='/' method='POST')
+      table.table
+        thead.thead-dark
+          tr
+            th ID
+            th Name
+            th @Email
+            th Gender
+            th Status
+            th Action
+        tbody
+          tr
+            td 1
+            td UserName
+            td example@gmail.com
+            td Female
+            td Active
+            td
+              a.btn.border-shadow.update(href='#')
+                span.text-gradient
+                  i.fa.fa-pencil
+              a.btn.border-shadow.delete(href='#')
+                span.text-gradient
+                  i.fa.fa-times
+    
+// --/Main Site--
